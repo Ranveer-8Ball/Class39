@@ -9,6 +9,18 @@ var database;
 var form, player, game;
 
 var cars, car1, car2, car3, car4;
+var carImage1, carImage2, carImage3, carImage4;
+var trackImage, groundImage;
+
+function preload(){
+  carImage1 = loadImage ("images/car1.png");
+  carImage2 = loadImage ("images/car2.png");
+  carImage3 = loadImage ("images/car3.png");
+  carImage4 = loadImage ("images/car4.png");
+
+  trackImage = loadImage ("images/track.png");
+  groundImage = loadImage ("images/ground.png");
+}
 
 
 function setup(){
@@ -27,5 +39,8 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }
+  if(gameState === 2){
+    game.end();
   }
 }
